@@ -116,3 +116,7 @@ True
 - [ ] Add a device to the registry
 - [ ] Add a public key to the device
 - [ ] Create a subscription
+
+
+
+-
