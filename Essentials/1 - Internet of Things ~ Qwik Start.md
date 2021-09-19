@@ -21,8 +21,10 @@
     ```
 
 - [ ] **CREATE TOPIC** --> ID : "cloud-builds"
-	```cloud-builds	```
-    
+```
+cloud-builds
+```
+
 - click **CREATE TOPIC**
 
 ---
@@ -35,9 +37,9 @@
     ```
 
 	- Registry ID --> **COPY & PASTE** --> "my-registry"
-	```
-	my-registry
-	```
+```
+my-registry
+```
 	- Select Region --> us-central1
 	- Click on Show Advanced Option
 	- Uncheck HTTP
@@ -54,9 +56,9 @@
 
 - [ ] Follow Steps 
     - Device ID : 
-        ```
-        my-device
-        ```
+```
+my-device
+```
     - click communicaiton, cloud logging,authentication
     
     - Under Authentication (optional)
