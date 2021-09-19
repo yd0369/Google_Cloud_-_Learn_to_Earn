@@ -19,7 +19,7 @@ Enter the new Project ID : qwiklabs-gcp-01-b2fa1307bc7b
 
 - [OPTIONAL] Check by Going to Compute Engine > VM INstances
     ```
-    https://console.cloud.google.com/compute/instances
+    https://console.cloud.google.com/compute/instancesDetail/zones/us-central1-a/instances/lamp-1-vm
     ```
 
 - [ ] **Hit that "Create a Compute Engine instance (zone: us-central1-a)"**
