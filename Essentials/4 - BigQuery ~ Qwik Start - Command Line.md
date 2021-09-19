@@ -38,6 +38,13 @@ bq query "SELECT name,count FROM babynames.names2010 WHERE gender = 'F' ORDER BY
 
 
 bq query "SELECT name,count FROM babynames.names2010 WHERE gender = 'M' ORDER BY count ASC LIMIT 5"
+
+bq rm -r babynames
+
+
+
+
+
 ```
 
 
