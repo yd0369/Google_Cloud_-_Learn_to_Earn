@@ -92,3 +92,5 @@ Enter the new Project ID : qwiklabs-gcp-02-ed520e82c97c
 - Get a success response over External IP of VM instance
 
 - Create an uptime check and alerting policy
+
+---
