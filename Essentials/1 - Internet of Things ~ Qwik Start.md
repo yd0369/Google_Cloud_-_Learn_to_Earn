@@ -21,9 +21,8 @@
     ```
 
 - [ ] **CREATE TOPIC** --> ID : "cloud-builds"
-	```
-    cloud-builds
-	```
+	```cloud-builds	```
+    
 - click **CREATE TOPIC**
 
 ---
@@ -77,7 +76,7 @@
     cp ../../../rsa_private.pem .
     
     npm install
-    
+    ange
     gcloud pubsub subscriptions create     projects/$PID/subscriptions/my-subscription    --topic=projects/$PID/topics/cloud-builds
     
     wget https://pki.goog/roots.pem
