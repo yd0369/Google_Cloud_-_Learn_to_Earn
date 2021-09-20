@@ -2,7 +2,7 @@
 
 
 ```
-export id="qwiklabs-gcp-01-0633d3ff5649"
+export id="
 ```
 
 
