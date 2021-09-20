@@ -1,9 +1,16 @@
 # Cloud Functions: Qwik Start - Command Line
 
 
-
+```
 export id="qwiklabs-gcp-01-0633d3ff5649"
+```
 
+
+--- 
+
+
+
+```
 mkdir gcf_hello_world
 cd gcf_hello_world
 echo "/**
@@ -25,3 +32,4 @@ gsutil mb -p $id gs://$id
 
 gcloud functions deploy helloWorld --stage-bucket $id --trigger-topic hello_world --runtime nodejs8
 
+```
