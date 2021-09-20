@@ -2,7 +2,7 @@
 
 
 
-Enter the new Project ID : qwiklabs-gcp-01-b2fa1307bc7b
+Enter the new Project ID : qwiklabs-gcp-04-df4b63ac66ae
 
 ---
 ---
@@ -13,7 +13,11 @@ Enter the new Project ID : qwiklabs-gcp-01-b2fa1307bc7b
 
 - [ ] Create a Compute Engine instance
     ```
-    gcloud beta compute --project=qwiklabs-gcp-01-b2fa1307bc7b instances create lamp-1-vm --zone=us-central1-a --machine-type=n1-standard-2 --subnet=default --network-tier=PREMIUM --maintenance-policy=MIGRATE --scopes=https://www.googleapis.com/auth/devstorage.read_only,https://www.googleapis.com/auth/logging.write,https://www.googleapis.com/auth/monitoring.write,https://www.googleapis.com/auth/servicecontrol,https://www.googleapis.com/auth/service.management.readonly,https://www.googleapis.com/auth/trace.append --tags=http-server --image=debian-10-buster-v20210916 --image-project=debian-cloud --boot-disk-size=10GB --boot-disk-type=pd-balanced --boot-disk-device-name=lamp-1-vm --no-shielded-secure-boot --shielded-vtpm --shielded-integrity-monitoring --reservation-affinity=any
+
+    ```
+    lamp-1-vm 
+    ```
+    gcloud beta compute --project=qwiklabs-gcp-04-df4b63ac66ae instances create lamp-1-vm --zone=us-central1-a --machine-type=n1-standard-2 --subnet=default --network-tier=PREMIUM --maintenance-policy=MIGRATE --scopes=https://www.googleapis.com/auth/devstorage.read_only,https://www.googleapis.com/auth/logging.write,https://www.googleapis.com/auth/monitoring.write,https://www.googleapis.com/auth/servicecontrol,https://www.googleapis.com/auth/service.management.readonly,https://www.googleapis.com/auth/trace.append --tags=http-server --image=debian-10-buster-v20210916 --image-project=debian-cloud --boot-disk-size=10GB --boot-disk-type=pd-balanced --boot-disk-device-name=lamp-1-vm --no-shielded-secure-boot --shielded-vtpm --shielded-integrity-monitoring --reservation-affinity=any
     ```
 
 
@@ -31,7 +35,7 @@ Enter the new Project ID : qwiklabs-gcp-01-b2fa1307bc7b
 
 - [ ] SSH to lamp-1-vm
     ```
-    https://ssh.cloud.google.com/projects/qwiklabs-gcp-01-b2fa1307bc7b/zones/us-central1-a/instances/lamp-1-vm
+    https://ssh.cloud.google.com/projects/qwiklabs-gcp-04-df4b63ac66ae/zones/us-central1-a/instances/lamp-1-vm
     ```
 
 - [ ] Run following commands in VM
