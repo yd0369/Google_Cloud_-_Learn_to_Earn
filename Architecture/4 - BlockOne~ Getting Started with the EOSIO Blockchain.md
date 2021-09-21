@@ -8,7 +8,7 @@ my-vm-1
 
 - [ ] SSH Add ProID fter projects/***/
     ```
-    https://ssh.cloud.google.com/projects//zones/us-central1-a/instances/lamp-1-vm
+    https://ssh.cloud.google.com/projects//zones/us-central1-a/instances/my-vm-1
     ```
 
 
