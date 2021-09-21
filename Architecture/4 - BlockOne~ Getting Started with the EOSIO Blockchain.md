@@ -23,8 +23,10 @@ gcloud beta compute instances create my-vm-1 --zone=us-central1-a --machine-type
 
 ```
 wget https://github.com/EOSIO/eos/releases/download/v2.0.9/eosio_2.0.9-1-ubuntu-18.04_amd64.deb
+wget https://github.com/eosio/eosio.cdt/releases/download/v1.7.0/eosio.cdt_1.7.0-1-ubuntu-18.04_amd64.deb
+sudo apt install ./eosio_2.0.9-1-ubuntu-18.04_amd64.deb -y
+sudo apt install ./eosio.cdt_1.7.0-1-ubuntu-18.04_amd64.deb -y
 
-sudo apt install ./eosio_2.0.9-1-ubuntu-18.04_amd64.deb
 
 nodeos -e -p eosio --plugin eosio::chain_api_plugin --plugin eosio::history_api_plugin --contracts-console >> nodeos.log 2>&1 &
 
@@ -38,9 +40,6 @@ cleos wallet unlock --name my_wallet --password $wallet_password
 
 cleos wallet import --name my_wallet --private-key 5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3
 
-wget https://github.com/eosio/eosio.cdt/releases/download/v1.7.0/eosio.cdt_1.7.0-1-ubuntu-18.04_amd64.deb
-
-sudo apt install ./eosio.cdt_1.7.0-1-ubuntu-18.04_amd64.deb
 
 cleos wallet open --name my_wallet
 
@@ -52,11 +51,6 @@ cleos create key --file my_keypair1
 
 cat my_keypair1
 
-
-```
-
-- Enter the private key after command
-```
 cleos wallet import --name my_wallet --private-key 
 ```
 
