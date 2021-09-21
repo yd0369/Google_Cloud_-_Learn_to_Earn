@@ -52,6 +52,8 @@ cleos create key --file my_keypair1
 cat my_keypair1
 
 cleos wallet import --name my_wallet --private-key 
+
+
 ```
 
 - Enter the public key after command
