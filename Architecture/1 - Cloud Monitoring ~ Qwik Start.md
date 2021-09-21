@@ -49,6 +49,12 @@ Enter the new Project ID : qwiklabs-gcp-04-df4b63ac66ae
     sudo service apache2 restart
     ```
 
+    ```
+    sudo apt-get update
+    sudo apt-get install apache2 php7.0 -y
+    sudo service apache2 restart
+    ```
+
 
 - [ ] **Hit that "Add Apache2 HTTP Server to your instance"**
 - [ ] **Hit that "Get a success response over External IP of VM instance"**
