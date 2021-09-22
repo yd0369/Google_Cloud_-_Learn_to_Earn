@@ -4,7 +4,7 @@
 
 
 
-qwiklabs-gcp-00-4ea60e5d22a4
+qwiklabs-gcp-03-f95dcff12a51
 
 
 
@@ -56,7 +56,7 @@ kubectl get gameservers
 
 
 
-https://ssh.cloud.google.com/projects/qwiklabs-gcp-00-4ea60e5d22a4/zones/us-central1-a/instances/agones-test-vm
+https://ssh.cloud.google.com/projects/qwiklabs-gcp-03-f95dcff12a51/zones/us-central1-a/instances/agones-test-vm
 
 
 sudo apt install netcat -y
