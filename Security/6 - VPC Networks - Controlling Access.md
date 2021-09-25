@@ -1,5 +1,9 @@
 ```
 gcloud beta compute ssh --zone "us-central1-a" "blue"
+
+```
+
+```
 sudo apt-get install nginx-light -y
 sudo sed -i 's/<h1>Welcome to nginx/<h1>Welcome to the blue server/g' /var/www/html/index.nginx-debian.html
 
@@ -8,6 +12,10 @@ sudo sed -i 's/<h1>Welcome to nginx/<h1>Welcome to the blue server/g' /var/www/h
 
 ```
 gcloud beta compute ssh --zone "us-central1-a" "green"
+
+```
+
+```
 sudo apt-get install nginx-light -y
 sudo sed -i 's/<h1>Welcome to nginx/<h1>Welcome to the green server/g' /var/www/html/index.nginx-debian.html
 
