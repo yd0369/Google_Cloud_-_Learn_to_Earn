@@ -24,7 +24,7 @@ gcloud beta compute ssh --zone "us-central1-a" "instance-1"
 
 
 ```sudo apt update
-sudo apt install python3-pip
+sudo apt install python3-pip -y
 sudo pip3 install -U virtualenv
 virtualenv --system-site-packages -p python3 ./venv
 source ./venv/bin/activate
