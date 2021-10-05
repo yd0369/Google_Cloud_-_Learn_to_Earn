@@ -1,3 +1,19 @@
+```
+https://google.qwiklabs.com/focuses/8486?catalog_rank=%7B%22rank%22%3A1%2C%22num_filters%22%3A0%2C%22has_search%22%3Atrue%7D&parent=catalog
+```
+
+---
+
+```
+https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=crypto_bitcoin_cash&page=dataset
+```
+
+
+---
+---
+---
+
+
 
 
 ```
