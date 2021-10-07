@@ -1,5 +1,5 @@
 ```
-https://google.qwiklabs.com/focuses/634?catalog_rank=%7B%22rank%22%3A2%2C%22num_filters%22%3A0%2C%22has_search%22%3Atrue%7D&parent=catalog&search_id=14128718
+https://google.qwiklabs.com/focuses/634?catalog_rank=%7B%22rank%22%3A2%2C%22num_filters%22%3A0%2C%22has_search%22%3Atrue%7D&parent=catalog
 ```
 
 ---
@@ -79,11 +79,7 @@ Submit Ticket - collect name
 - Training phrases
 
 ```
-I am bob
-```
-
-```
-Training phrases: My name is Lily
+My name is Lily
 ```
 
 - Under Responses 
