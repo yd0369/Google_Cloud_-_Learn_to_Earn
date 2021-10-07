@@ -66,7 +66,7 @@ Submit Ticket
 - Under Responses
 
     ```
-    `Sure! I can help you with that. Please provide your name for the ticket.`
+    Sure! I can help you with that. Please provide your name for the ticket.
     ```
 
 ---
@@ -88,6 +88,30 @@ My name is Lily
 ```
 Thanks $person! Now describe your issue.
 ```
+
+
+---
+
+### Create a Followup for Submit Ticket [Submit Ticket - collect name - custom]
+
+```
+Submit Ticket - collect description
+```
+
+- Training phrases
+
+```
+My name is Lily
+```
+
+- Under Responses 
+
+```
+Thanks $person! Now describe your issue.
+```
+
+
+
 
 ---
 ---
