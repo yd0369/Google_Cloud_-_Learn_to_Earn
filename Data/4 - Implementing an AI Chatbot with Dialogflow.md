@@ -28,89 +28,6 @@ https://dialogflow.cloud.google.com/
 - Google Project: Your Project ID
 
 
----
-### Create Intent
-
-```
-Submit Ticket
-```
-
----
-
-- Under Training Phase :
-    ```
-    Ticket
-    ```
-
-    ```
-    Submit ticket
-    ```
-
-    ```
-    Problem
-    ```
-
-    ```
-    Issue
-    ```
-
-    ```
-    I want to submit a ticket
-    ```
-
-    ```
-    I have a problem
-    ```
----
-
-- Under Responses
-
-    ```
-    Sure! I can help you with that. Please provide your name for the ticket.
-    ```
-
----
-
-### Create a Followup for Submit Ticket [Submit Ticket - custom]
-
-```
-Submit Ticket - collect name
-```
-
-- Training phrases
-
-```
-My name is Lily
-```
-
-- Under Responses 
-
-```
-Thanks $person! Now describe your issue.
-```
-
-
----
-
-### Create a Followup for Submit Ticket [Submit Ticket - collect name - custom]
-
-```
-Submit Ticket - collect description
-```
-
-- Training phrases
-
-```
-My name is Lily
-```
-
-- Under Responses 
-
-```
-Thanks $person! Now describe your issue.
-```
-
-
 
 
 ---
@@ -205,4 +122,88 @@ exports.dialogflowFirebaseFulfillment = (req, res) => {
     "@google-cloud/datastore": "^1.1.0"
   }
 }
+```
+
+
+
+---
+---
+---
+
+### Create Intent
+
+```
+Submit Ticket
+```
+
+---
+
+- Under Training Phase :
+    ```
+    Ticket
+    ```
+
+- Under Responses
+
+    ```
+    Sure! I can help you with that. Please provide your name for the ticket.
+    ```
+
+---
+
+### Create a Followup for Submit Ticket [Submit Ticket - custom]
+
+```
+Submit Ticket - collect name
+```
+
+- Training phrases
+
+```
+My name is Lily
+
+```
+
+- Under Responses 
+
+```
+Thanks $person! Now describe your issue.
+```
+
+
+---
+
+### Create a Followup for Submit Ticket [Submit Ticket - collect name - custom]
+
+```
+Submit Ticket - collect description
+```
+
+- Training phrases
+
+```
+Everything is hosed
+```
+
+
+
+
+
+
+
+---
+---
+---
+
+```
+Ticket
+```
+
+```
+My name is Lily
+
+```
+
+```
+Everything is hosed
 ```
