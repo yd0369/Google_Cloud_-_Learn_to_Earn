@@ -1,6 +1,10 @@
 ```
 https://console.cloud.google.com/bigquery?project=data-to-insights&page=ecommerce
 ```
+```
+&cloudshell=true
+```
+
 
 
 
