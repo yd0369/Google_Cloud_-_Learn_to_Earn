@@ -91,7 +91,7 @@ echo "WITH unique_product_views_by_person AS (
 SELECT
  fullVisitorId,
  (v2ProductName) AS ProductName
-FROM `data-to-insights.ecommerce.all_sessions`
+FROM \`data-to-insights.ecommerce.all_sessions\`
 WHERE type = 'PAGE'
 GROUP BY fullVisitorId, v2ProductName )
 -- aggregate the top viewed products and sort them
