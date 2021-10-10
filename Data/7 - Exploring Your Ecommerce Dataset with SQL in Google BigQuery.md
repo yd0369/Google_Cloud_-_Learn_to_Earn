@@ -2,15 +2,22 @@
 https://console.cloud.google.com/bigquery?project=data-to-insights&page=ecommerce
 ```
 
-```
-bq query "#standardSQL
-SELECT COUNT(*) as num_duplicate_rows, * FROM
-`data-to-insights.ecommerce.all_sessions_raw`
-GROUP BY
-fullVisitorId, channelGrouping, time, country, city, totalTransactionRevenue, transactions, timeOnSite, pageviews, sessionQualityDim, date, visitId, type, productRefundAmount, productQuantity, productPrice, productRevenue, productSKU, v2ProductName, v2ProductCategory, productVariant, currencyCode, itemQuantity, itemRevenue, transactionRevenue, transactionId, pageTitle, searchKeyword, pagePathLevel1, eCommerceAction_type, eCommerceAction_step, eCommerceAction_option
-HAVING num_duplicate_rows > 1;"
 
-bq query "#standardSQL
+
+```
+echo "#standardSQL
+SELECT COUNT(*) as num_duplicate_rows, * FROM 
+\`data-to-insights.ecommerce.all_sessions_raw\` 
+GROUP BY 
+fullVisitorId, channelGrouping, time, country, city, totalTransactionRevenue, transactions, timeOnSite, pageviews, sessionQualityDim, date, visitId, type, productRefundAmount, productQuantity,  
+productPrice, productRevenue, productSKU, v2ProductName, v2ProductCategory, productVariant, currencyCode, itemQuantity, itemRevenue, transactionRevenue, transactionId, pageTitle, searchKeyword, 
+pagePathLevel1, eCommerceAction_type, eCommerceAction_step, eCommerceAction_option 
+HAVING num_duplicate_rows > 1;" > Query1.txt
+
+bq query < Query1.txt
+
+
+echo "#standardSQL
 SELECT
 fullVisitorId, # the unique visitor ID
 visitId, # a visitor can have multiple visits
@@ -26,47 +33,60 @@ eCommerceAction_option,
   transactionId, # unique identifier for revenue bearing transaction
 COUNT(*) as row_count
 FROM
-`data-to-insights.ecommerce.all_sessions`
+\`data-to-insights.ecommerce.all_sessions\`
 GROUP BY 1,2,3 ,4, 5, 6, 7, 8, 9, 10,11,12
-HAVING row_count > 1 # find duplicates"
+HAVING row_count > 1 # find duplicates" > Query1.txt
+
+bq query < Query1.txt
 
 
-bq query "#standardSQL
+echo "#standardSQL
 SELECT
   COUNT(*) AS product_views,
   COUNT(DISTINCT fullVisitorId) AS unique_visitors
-FROM `data-to-insights.ecommerce.all_sessions`;"
+FROM \`data-to-insights.ecommerce.all_sessions\`;" > Query1.txt
 
-bq query "#standardSQL
+bq query < Query1.txt
+
+```
+```
+echo "#standardSQL
 SELECT
   COUNT(DISTINCT fullVisitorId) AS unique_visitors,
   channelGrouping
-FROM `data-to-insights.ecommerce.all_sessions`
+FROM \`data-to-insights.ecommerce.all_sessions\`
 GROUP BY channelGrouping
-ORDER BY channelGrouping DESC;"
+ORDER BY channelGrouping DESC;" > Query2.txt
+
+bq query < Query2.txt
 
 
 
-bq query "#standardSQL
+echo "#standardSQL
 SELECT
   (v2ProductName) AS ProductName
-FROM `data-to-insights.ecommerce.all_sessions`
+FROM \`data-to-insights.ecommerce.all_sessions\`
 GROUP BY ProductName
-ORDER BY ProductName"
-```
+ORDER BY ProductName" > Query2.txt
 
-```
-bq query "#standardSQL
+bq query < Query2.txt
+
+echo "#standardSQL
 SELECT
   COUNT(*) AS product_views,
   (v2ProductName) AS ProductName
-FROM `data-to-insights.ecommerce.all_sessions`
+FROM \`data-to-insights.ecommerce.all_sessions\`
 WHERE type = 'PAGE'
 GROUP BY v2ProductName
 ORDER BY product_views DESC
-LIMIT 5;"
+LIMIT 5;" > Query2.txt
 
-bq query "WITH unique_product_views_by_person AS (
+bq query < Query2.txt
+
+
+```
+```
+echo "WITH unique_product_views_by_person AS (
 -- find each unique product viewed by each visitor
 SELECT
  fullVisitorId,
@@ -81,30 +101,37 @@ SELECT
 FROM unique_product_views_by_person
 GROUP BY ProductName
 ORDER BY unique_view_count DESC
-LIMIT 5"
+LIMIT 5" > Query3.txt
 
-bq query "#standardSQL
+bq query --use_legacy_sql=false < Query3.txt
+
+echo "#standardSQL
 SELECT
   COUNT(*) AS product_views,
   COUNT(productQuantity) AS orders,
   SUM(productQuantity) AS quantity_product_ordered,
   v2ProductName
-FROM `data-to-insights.ecommerce.all_sessions`
+FROM \`data-to-insights.ecommerce.all_sessions\`
 WHERE type = 'PAGE'
 GROUP BY v2ProductName
 ORDER BY product_views DESC
-LIMIT 5;"
+LIMIT 5;" > Query3.txt
 
-bq query "#standardSQL
+bq query < Query3.txt
+
+echo "#standardSQL
 SELECT
   COUNT(*) AS product_views,
   COUNT(productQuantity) AS orders,
   SUM(productQuantity) AS quantity_product_ordered,
   SUM(productQuantity) / COUNT(productQuantity) AS avg_per_order,
   (v2ProductName) AS ProductName
-FROM `data-to-insights.ecommerce.all_sessions`
+FROM \`data-to-insights.ecommerce.all_sessions\`
 WHERE type = 'PAGE'
 GROUP BY v2ProductName
 ORDER BY product_views DESC
-LIMIT 5;"
+LIMIT 5;"  > Query3.txt
+
+bq query < Query3.txt
+
 ```
