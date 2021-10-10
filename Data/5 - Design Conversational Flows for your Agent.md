@@ -24,8 +24,23 @@ name.reservation
 ```
 
 ```
+I want to change my name on my itinerary.
+```
+
+```
 Can I change my name on my reservation?
 ```
+
+```
+I need to change my name on the booking.
+```
+
+```
+I want to change my name on my hotel reservation.
+```
+
+
+
 
 ```
 Sure I can help you to change your name on the reservation. Can I have your first name?
