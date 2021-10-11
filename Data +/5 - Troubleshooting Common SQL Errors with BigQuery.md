@@ -56,7 +56,7 @@ SELECT
 COUNT(DISTINCT fullVisitorId) AS visitor_count
 , hits_page_pageTitle
 FROM \`data-to-insights.ecommerce.rev_transactions\`
-WHERE hits_page_pageTitle = "Checkout Confirmation"
+WHERE hits_page_pageTitle = \"Checkout Confirmation\"
 GROUP BY hits_page_pageTitle
 " > Query1.txt
 bq query --use_legacy_sql=false < Query1.txt
