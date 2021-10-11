@@ -6,6 +6,16 @@ https://www.cloudskillsboost.google/focuses/3616?catalog_rank=%7B%22rank%22%3A1%
 &cloudshell=true
 ```
 
+
+```
+bq query --use_legacy_sql=false < Query1.txt
+
+bq load babynames.names_2014 yob2014.txt name:string,gender:string,count:integer
+
+bq query --use_legacy_sql=false < Query2.txt
+
+```
+
 ```
 echo "
 SELECT
@@ -48,13 +58,5 @@ ORDER BY count DESC LIMIT 5;
 
 
 bq mk --location=US babynames 
-
-```
-```
-bq query --use_legacy_sql=false < Query1.txt
-
-bq load babynames.names_2014 yob2014.txt name:string,gender:string,count:integer
-
-bq query --use_legacy_sql=false < Query2.txt
 
 ```
