@@ -1,4 +1,9 @@
- 
+```
+&cloudshell=true
+
+``` 
+
+
 ```
 git clone https://github.com/GoogleCloudPlatform/data-science-on-gcp/
 cd data-science-on-gcp
