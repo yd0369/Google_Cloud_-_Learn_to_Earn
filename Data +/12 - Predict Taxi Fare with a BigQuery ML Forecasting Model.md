@@ -83,7 +83,7 @@ WITH params AS (
 bq query --use_legacy_sql=false < Query2.txt
 
 ```
-
+---
 
 ```
 echo "
@@ -160,7 +160,7 @@ FROM
 bq query --use_legacy_sql=false < Query4.txt
 
 ```
-
+---
 
 ```
 echo "
