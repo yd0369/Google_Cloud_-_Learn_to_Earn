@@ -4,7 +4,7 @@ https://www.cloudskillsboost.google/focuses/1101?catalog_rank=%7B%22rank%22%3A1%
 
 
 ```
-?cloudshell=true
+&cloudshell=true
 ```
 
 
@@ -19,4 +19,7 @@ timestamp:timestamp,meter_reading:float,meter_increment:float,ride_status:string
 passenger_count:integer -t taxirides.realtime
 
 gsutil mb gs://$DEVSHELL_PROJECT_ID
+
+gcloud dataflow jobs run iotflow --gcs-location gs://dataflow-templates-us-central1/latest/PubSub_to_BigQuery --region us-central1 --staging-location gs://$DEVSHELL_PROJECT_ID/temp --parameters inputTopic=projects/pubsub-public-data/topics/taxirides-realtime,outputTableSpec=$DEVSHELL_PROJECT_ID:taxirides.realtime
+
 ```
