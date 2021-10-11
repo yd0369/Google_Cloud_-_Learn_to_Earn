@@ -48,9 +48,6 @@ ORDER BY
 
 bq query --use_legacy_sql=false < Query1.txt
 
-```
-
-```
 echo "
 #standardSQL
 WITH params AS (
@@ -82,10 +79,6 @@ WITH params AS (
 
 bq query --use_legacy_sql=false < Query2.txt
 
-```
----
-
-```
 echo "
 CREATE or REPLACE MODEL taxi.taxifare_model
 OPTIONS
