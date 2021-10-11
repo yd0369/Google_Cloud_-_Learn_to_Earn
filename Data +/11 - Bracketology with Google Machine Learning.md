@@ -272,6 +272,19 @@ WHERE season BETWEEN 2014 AND 2017 # between in SQL is inclusive of end points
  bq query --use_legacy_sql=false < Query7.txt
 
 
+
+echo "
+SELECT
+  *
+FROM
+  ML.EVALUATE(MODEL     \`bracketology.ncaa_model_updated\`)
+" > Query13.txt
+
+ bq query --use_legacy_sql=false < Query13.txt
+
+
+
+
 echo "
 CREATE OR REPLACE TABLE \`bracketology.ncaa_2018_predictions\` AS
 # let's add back our other data columns for context
