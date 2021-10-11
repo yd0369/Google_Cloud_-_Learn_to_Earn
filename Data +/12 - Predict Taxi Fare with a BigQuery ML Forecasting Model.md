@@ -185,10 +185,6 @@ WITH params AS (
 
 bq query --use_legacy_sql=false < Query3.txt
 
-
-```
-
-```
 bq query --use_legacy_sql=false < Query4.txt
 bq query --use_legacy_sql=false < Query5.txt
 
