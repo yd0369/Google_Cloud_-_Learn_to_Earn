@@ -430,6 +430,15 @@ SELECT * FROM \`bracketology.ncaa_2019_tournament\`
  bq query --use_legacy_sql=false < Query12.txt
 
 
+echo "
+SELECT
+  *
+FROM
+  ML.EVALUATE(MODEL     \`bracketology.ncaa_model_updated\`)
+" > Query13.txt
+
+ bq query --use_legacy_sql=false < Query13.txt
+
 ```
 
 
