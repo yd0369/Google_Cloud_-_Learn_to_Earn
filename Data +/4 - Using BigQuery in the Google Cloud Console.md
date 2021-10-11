@@ -7,7 +7,6 @@ https://www.cloudskillsboost.google/focuses/3616?catalog_rank=%7B%22rank%22%3A1%
 ```
 
 ```
-
 echo "
 SELECT
   name, gender,
@@ -23,13 +22,6 @@ LIMIT
   10
 " > Query1.txt
 
-bq query --use_legacy_sql=false < Query1.txt
-
-
-bq mk --location=US babynames 
-
-```
-```
 echo "Emma,F,20943
 Olivia,F,19823
 Sophia,F,18630
@@ -44,8 +36,6 @@ Harper,F,9609
 Sofia,F,9600
 Elizabeth,F,9576" > yob2014.txt
 
-bq load babynames.names_2014 yob2014.txt name:string,gender:string,count:integer
-
 echo "
 SELECT
  name, count
@@ -55,6 +45,21 @@ WHERE
  gender = 'M'
 ORDER BY count DESC LIMIT 5;
 " > Query2.txt
+
+
+bq mk --location=US babynames 
+
+
+
+
+
+
+
+```
+```
+bq query --use_legacy_sql=false < Query1.txt
+
+bq load babynames.names_2014 yob2014.txt name:string,gender:string,count:integer
 
 bq query --use_legacy_sql=false < Query2.txt
 
