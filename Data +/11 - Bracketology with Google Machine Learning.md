@@ -271,15 +271,6 @@ WHERE season BETWEEN 2014 AND 2017 # between in SQL is inclusive of end points
 
  bq query --use_legacy_sql=false < Query7.txt
 
-echo "
-SELECT
-  *
-FROM
-  ML.EVALUATE(MODEL     \`bracketology.ncaa_model_updated\`)
-" > Query13.txt
-
- bq query --use_legacy_sql=false < Query13.txt
-
 
 echo "
 CREATE OR REPLACE TABLE \`bracketology.ncaa_2018_predictions\` AS
@@ -438,5 +429,25 @@ SELECT * FROM \`bracketology.ncaa_2019_tournament\`
 
  bq query --use_legacy_sql=false < Query12.txt
 
+
+```
+
+
+---
+
+```
+echo "
+CREATE OR REPLACE TABLE \`bracketology.ncaa_2019_tournament_predictions\` AS
+SELECT
+  *
+FROM
+  # let's predicted using the newer model
+  ML.PREDICT(MODEL     \`bracketology.ncaa_model_updated\`, (
+# let's predict on March 2019 tournament games:
+SELECT * FROM \`bracketology.ncaa_2019_tournament\`
+))
+" > Query12.txt
+
+ bq query --use_legacy_sql=false < Query12.txt
 
 ```
