@@ -33,3 +33,8 @@ gsutil cp *.csv gs://$DEVSHELL_PROJECT_ID
 ```
 qwiklabs-demo
 ```
+
+
+```
+CREATE DATABASE bike;
+```
