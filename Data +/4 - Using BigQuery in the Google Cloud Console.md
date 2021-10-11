@@ -28,6 +28,8 @@ bq query --use_legacy_sql=false < Query1.txt
 
 bq mk --location=US babynames 
 
+```
+```
 echo "Emma,F,20943
 Olivia,F,19823
 Sophia,F,18630
@@ -52,8 +54,8 @@ FROM
 WHERE
  gender = 'M'
 ORDER BY count DESC LIMIT 5;
-" > Query1.txt
+" > Query2.txt
 
-bq query --use_legacy_sql=false < Query1.txt
+bq query --use_legacy_sql=false < Query2.txt
 
 ```
