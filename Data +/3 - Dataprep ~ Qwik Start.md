@@ -15,6 +15,6 @@ gsutil mb gs://$DEVSHELL_PROJECT_ID
 
 
 ```
-https://console.cloud.google.com/dataprep/dataSharing
+https://console.cloud.google.com/dataprep
 ```
 
