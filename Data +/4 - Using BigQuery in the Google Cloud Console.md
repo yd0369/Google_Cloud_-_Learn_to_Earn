@@ -49,12 +49,6 @@ ORDER BY count DESC LIMIT 5;
 
 bq mk --location=US babynames 
 
-
-
-
-
-
-
 ```
 ```
 bq query --use_legacy_sql=false < Query1.txt
