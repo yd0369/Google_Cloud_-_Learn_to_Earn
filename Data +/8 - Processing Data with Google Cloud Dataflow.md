@@ -1,4 +1,11 @@
- 
+
+```
+&cloudshell=true
+```
+
+
+
+```
 git clone https://github.com/GoogleCloudPlatform/data-science-on-gcp/
 cd ~/data-science-on-gcp/04_streaming/simulate
 virtualenv data-sci-env -p python3
@@ -37,3 +44,5 @@ LIMIT
   10
   " > Query.txt
 bq query --use_legacy_sql=false < Query.txt
+
+```
